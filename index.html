@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos/style.css" type="text/css"/>
+    <title>Administrador</title>
+    <script src="javinha.js"></script>
+  </head>
+  <body>
+    <form name="tbusuarios" action="php/login.php" method="post">
+      <div class="actual-form">
+        <div class="heading">Bem-vindo</div>
+        <div class="input-wrap">
+          <input
+            name="login"
+            type="text"
+            minlength="4"
+            class="input-field"
+            autocomplete="off"
+            required
+          />
+          <label class="input-label" onclick="esconderLabel(this)">Login:</label>
+        </div>
+        <div class="input-wrap">
+          <input
+            name="senha"
+            type="password"
+            id="senha"
+            minlength="4"
+            class="input-field"
+            autocomplete="off"
+            required
+          />
+          <label class="input-label" for="senha">Senha:</label>
+          <img src="img/olho.png" type="button" onclick="mostrarSenha()" class="olho"/>
+        </div>
+        <input type="submit" name="btnLogin" value="Entrar" class="sign-btn"/>
+      </div>
+    </form>
+  </body>
+</html>

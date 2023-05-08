@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../estilos/style.css" type="text/css"/>
+    <script src="../javinha.js"></script>
+    <title>Cliente</title>
+  </head>
+  <body>
+    <form name="tbclientes" action="../php/inserircli.php" method="post">
+      <div class="actual-form">
+        <div class="heading">Cadastre o cliente</div>
+        <div class="input-wrap">
+          <input
+            name="nome_cli"
+            type="text"
+            minlength="3"
+            class="input-field"
+            autocomplete="off"
+            pattern="[a-zA-Z]+" 
+            onkeypress="return event.charCode >= 65 && event.charCode <= 122"
+            required
+          />
+          <label class="input-label">Nome:</label>
+        </div>
+        <div class="input-wrap">
+          <input
+            name="endereço_cli"
+            type="text"
+            minlength="10"
+            class="input-field"
+            autocomplete="off"
+          />
+          <label class="input-label">Endereço:</label>
+        </div>
+          <div class="input-wrap">
+            <input
+              name="fone_cli"
+              type="number"
+              minlength="8"
+              maxlength="12"
+              class="input-field"
+              autocomplete="off"
+            />
+            <label class="input-label">Telefone:</label>
+          </div>
+          <div class="input-wrap">
+          <input
+            name="email_cli"
+            type="email"
+            minlength="4"
+            class="input-field"
+            autocomplete="off"
+            required
+          />
+          <label class="input-label">Email:</label>
+        </div>
+        <!--<button class="sign-btn" onclick="window.location.href='principal.html'">Voltar</button>-->
+        <input type="submit" name="enviar" class="sign-btn" value="Cadastrar"/>
+        <!--<button class="sign-btn" onclick="sair()">Sair</button>-->
+      </div>
+    </form>
+  </body>
+</html>

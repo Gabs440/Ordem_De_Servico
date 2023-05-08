@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../estilos/style.css" type="text/css" />
+    <script src="../javinha.js"></script>
+    <title>OS</title>
+  </head>
+  <body>
+    <form name="tbos" action="../php/inseriros.php" method="post">
+      <div class="actual-form">
+        <div class="heading">Informe a ordem de serviço</div>
+        <div class="input-wrap">
+          <input
+            name="data_os"
+            type="date"
+            class="input-field"
+            placeholder="dd/mm/aaaa"
+            min="2023-01-01" 
+            max="2050-12-31"
+            autocomplete="off"
+            required
+          />
+          <label class="input-label" >Data:</label>
+        </div>
+        <div class="input-wrap">
+          <input
+            name="equipamento"
+            type="text"
+            minlength="2"
+            class="input-field"
+            autocomplete="off"
+            required
+          />
+          <label class="input-label">Aparelho:</label>
+        </div>
+          <div class="input-wrap">
+            <input
+              name="defeito"
+              type="text"
+              minlength="8"
+              class="input-field"
+              autocomplete="off"
+              required
+            />
+            <label class="input-label">Defeito:</label>
+          </div>
+          <div class="input-wrap">
+            <input
+              name="serviço"
+              type="text"
+              minlength="8"
+              class="input-field"
+              autocomplete="off"
+              required
+            />
+            <label class="input-label">Serviço:</label>
+          </div>
+          <div class="input-wrap">
+            <input
+              name="tecnico"
+              type="text"
+              minlength="3"
+              class="input-field"
+              autocomplete="off"
+              pattern="[a-zA-Z]+" 
+              onkeypress="return event.charCode >= 65 && event.charCode <= 122"
+              required
+            />
+            <label class="input-label">Técnico:</label>
+          </div>
+        
+        <div class="input-wrap">
+          <input
+            name="valor"
+            type="number"
+            minlength="1"
+            class="input-field"
+            autocomplete="off"
+            step="0.01"
+            required
+          />
+          <label class="input-label">Custo:</label>
+        </div>
+        <!--<button class="sign-btn" onclick="window.location.href='principal.html'">Voltar</button>-->
+        <input type="submit" name="enviar" class="sign-btn" value="Informar" />
+        <!--<button class="sign-btn" onclick="sair()">Sair</button>-->
+      </div>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../estilos/style.css" type="text/css"/>
+    <script src="../javinha.js"></script>
+    <title>Usuário</title>
+  </head>
+  <body>
+    <form name="tbusuarios" action="../php/inserirusu.php" method="post">
+      <div class="actual-form">
+        <div class="heading">Cadastre o Usuário de acesso</div>
+        <div class="input-wrap">
+          <input
+            name="usuario"
+            type="text"
+            minlength="3"
+            class="input-field"
+            autocomplete="off"
+            pattern="[a-zA-Z]+" 
+            onkeypress="return event.charCode >= 65 && event.charCode <= 122"
+            required
+          />
+          <label class="input-label">Usuário:</label>
+        </div>
+        <div class="input-wrap">
+          <input
+            name="login"
+            type="text"
+            minlength="4"
+            class="input-field"
+            autocomplete="off"
+            required
+          />
+          <label class="input-label">Login:</label>
+        </div>
+          <div class="input-wrap">
+            <input
+              name="senha"
+              type="password"
+              id="senha"
+              minlength="4"
+              class="input-field"
+              autocomplete="off"
+              required
+            />
+            <label for="senha" class="input-label">Senha:</label>
+            <img src="../img/olho.png" type="button" onclick="mostrarSenha()" class="olho"/>
+          </div>
+
+          <div class="input-wrap">
+            <input
+              name="perfil"
+              type="text"
+              minlength="4"
+              class="input-field"
+              autocomplete="off"
+              pattern="[a-zA-Z]+" 
+              onkeypress="return event.charCode >= 65 && event.charCode <= 122"
+              required
+            />
+            <label class="input-label">Perfil:</label>
+          </div>
+
+          <div class="input-wrap">
+            <input
+              name="fone"
+              type="number"
+              maxlength="12"
+              class="input-field"
+              autocomplete="off"
+            />
+            <label class="input-label">Telefone:</label>
+          </div>
+          <!--<button class="sign-btn" onclick="window.location.href='principal.html'">Voltar</button>-->
+        <input type="submit" name="enviar" value="Cadastrar"class="sign-btn" />
+        <!--<button class="sign-btn" onclick="sair()">Sair</button>-->
+      </div>
+    </form>
+  </body>
+</html>
